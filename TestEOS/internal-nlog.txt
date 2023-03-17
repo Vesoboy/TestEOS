@@ -1,0 +1,47 @@
+2023-03-17 02:30:27.1139 Info Message Template Auto Format enabled
+2023-03-17 02:30:27.1302 Info Loading assembly: NLog.Web.AspNetCore
+2023-03-17 02:30:27.1771 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-03-17 02:30:27.1771 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2023-03-17 02:30:27.1985 Info Validating config: TargetNames=ownFile-web, ConfigItems=43, FilePath=C:\Users\Ivan\Desktop\TestEOS\TestEOS\bin\Debug\net5.0\NLog.config
+2023-03-17 02:30:27.2064 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: allfile
+2023-03-17 02:30:27.2064 Info Configuration initialized.
+2023-03-17 02:30:27.2064 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.2.1561. Product version: 5.1.2+f57745d9fb1124b8629db879019db120a57698ab. GlobalAssemblyCache: False
+2023-03-17 02:30:27.2064 Info Validating config: TargetNames=ownFile-web, ConfigItems=43, FilePath=C:\Users\Ivan\Desktop\TestEOS\TestEOS\bin\Debug\net5.0\NLog.config
+2023-03-17 02:30:47.2997 Info Loading NLog config from XML file: C:\Users\Ivan\Desktop\TestEOS\TestEOS\bin\Debug\net5.0\nlog.config
+2023-03-17 02:30:47.2997 Info Message Template Auto Format enabled
+2023-03-17 02:30:47.3157 Info Loading assembly: NLog.Web.AspNetCore
+2023-03-17 02:30:47.3157 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-03-17 02:30:47.3157 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2023-03-17 02:30:47.3157 Info Closing old configuration.
+2023-03-17 02:30:47.3417 Info Validating config: TargetNames=ownFile-web, ConfigItems=43, FilePath=C:\Users\Ivan\Desktop\TestEOS\TestEOS\bin\Debug\net5.0\nlog.config
+2023-03-17 02:30:47.3417 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: allfile
+2023-03-17 02:32:15.7352 Info Message Template Auto Format enabled
+2023-03-17 02:32:15.7497 Info Loading assembly: NLog.Web.AspNetCore
+2023-03-17 02:32:15.7869 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-03-17 02:32:15.7869 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2023-03-17 02:32:15.8066 Info Validating config: TargetNames=ownFile-web, ConfigItems=43, FilePath=C:\Users\Ivan\Desktop\TestEOS\TestEOS\bin\Debug\net5.0\NLog.config
+2023-03-17 02:32:15.8066 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: allfile
+2023-03-17 02:32:15.8203 Info Configuration initialized.
+2023-03-17 02:32:15.8203 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.2.1561. Product version: 5.1.2+f57745d9fb1124b8629db879019db120a57698ab. GlobalAssemblyCache: False
+2023-03-17 02:32:15.8203 Info Validating config: TargetNames=ownFile-web, ConfigItems=43, FilePath=C:\Users\Ivan\Desktop\TestEOS\TestEOS\bin\Debug\net5.0\NLog.config
+2023-03-17 02:32:16.1275 Info Loading NLog config from XML file: C:\Users\Ivan\Desktop\TestEOS\TestEOS\bin\Debug\net5.0\nlog.config
+2023-03-17 02:32:16.1275 Info Message Template Auto Format enabled
+2023-03-17 02:32:16.1275 Info Loading assembly: NLog.Web.AspNetCore
+2023-03-17 02:32:16.1275 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2023-03-17 02:32:16.1275 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2023-03-17 02:32:16.1275 Info Closing old configuration.
+2023-03-17 02:32:16.1506 Info Validating config: TargetNames=ownFile-web, ConfigItems=43, FilePath=C:\Users\Ivan\Desktop\TestEOS\TestEOS\bin\Debug\net5.0\nlog.config
+2023-03-17 02:32:16.1506 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: allfile
+2023-03-17 02:34:16.8508 Info Message Template Auto Format enabled
+2023-03-17 02:34:16.8508 Info Loading assembly: NLog.Web.AspNetCore
+2023-03-17 02:34:16.8863 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2023-03-17 02:34:16.9045 Info Validating config: TargetNames=ownFile-web, ConfigItems=18, FilePath=C:\Users\Ivan\Desktop\TestEOS\TestEOS\bin\Debug\net5.0\NLog.config
+2023-03-17 02:34:16.9157 Info Configuration initialized.
+2023-03-17 02:34:16.9157 Info NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.1.2.1561. Product version: 5.1.2+f57745d9fb1124b8629db879019db120a57698ab. GlobalAssemblyCache: False
+2023-03-17 02:34:16.9157 Info Validating config: TargetNames=ownFile-web, ConfigItems=18, FilePath=C:\Users\Ivan\Desktop\TestEOS\TestEOS\bin\Debug\net5.0\NLog.config
+2023-03-17 02:34:17.1808 Info Loading NLog config from XML file: C:\Users\Ivan\Desktop\TestEOS\TestEOS\bin\Debug\net5.0\nlog.config
+2023-03-17 02:34:17.1808 Info Message Template Auto Format enabled
+2023-03-17 02:34:17.1808 Info Loading assembly: NLog.Web.AspNetCore
+2023-03-17 02:34:17.1903 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2023-03-17 02:34:17.1903 Info Closing old configuration.
+2023-03-17 02:34:17.1903 Info Validating config: TargetNames=ownFile-web, ConfigItems=18, FilePath=C:\Users\Ivan\Desktop\TestEOS\TestEOS\bin\Debug\net5.0\nlog.config

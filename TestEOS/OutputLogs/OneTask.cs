@@ -6,7 +6,7 @@ using Microsoft.Extensions.Hosting;
 
 namespace TestEOS.OutputLogs
 {
-    public class OneTask: IHostedService, IDisposable
+    public class OneTask: IHostedService//, IDisposable
     {
         private int executionCount = 0;
         private readonly ILogger<OneTask> _logger;
@@ -37,13 +37,15 @@ namespace TestEOS.OutputLogs
         public Task StopAsync(CancellationToken stoppingToken)
         {
             //_timer = null;//?.Change(Timeout.Infinite, 0);
-            //Program.Logger.Info("ФЗ 1 остановлено");
+            
+            Program.Logger.Info("ФЗ 1 остановлено");
+            _timer?.Dispose();
             return Task.CompletedTask;
         }
 
-        public void Dispose()
-        {
-            //_timer?.Dispose();
-        }
+        //public void Dispose()
+        //{
+        //    _timer?.Dispose();
+        //}
     }
 }

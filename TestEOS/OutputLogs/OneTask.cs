@@ -17,14 +17,13 @@ namespace TestEOS.OutputLogs
             _logger = logger;
             IsRunning = false;
         }
-
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
             while (!stoppingToken.IsCancellationRequested)
             {
                 IsRunning = true;
                 _logger.LogInformation("ФЗ 1 активна");
-                await Task.Delay(TimeSpan.FromSeconds(10), stoppingToken);
+                await Task.Delay(TimeSpan.FromSeconds(30), stoppingToken);
             }
             IsRunning = false;
         }

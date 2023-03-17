@@ -21,16 +21,21 @@ namespace TestEOS.OutputLogs
         {
             while (!stoppingToken.IsCancellationRequested)
             {
-                await Task.Delay(TimeSpan.FromSeconds(10), stoppingToken);
+                await Task.Delay(TimeSpan.FromSeconds(5), stoppingToken);
 
                 if (!_oneTask.IsRunning)
                 {
-                    var logFilePath = @"C:\Users\Ivan\Desktop\TestEOS\Logs\log.log";
-                    var logBackupFilePath = $@"C:\Users\Ivan\Desktop\TestEOS\Logs\logs\log{DateTime.Now:yyyy-MM-dd_HH-mm-ss}.log";
+                    var date = $"{DateTime.Now:yyyy-MM-dd_HH-mm-ss}";
+
+                    string logPath = Path.Combine("C:", "Users", "Ivan", "Desktop", "TestEOS", "Logs");
+                    var logFilePath = Path.Combine(logPath, "log.log");
+
+                    string logPathBackup = Path.Combine("C:", "Users", "Ivan", "Desktop", "TestEOS", "Logs", "logs");
+                    var logBackupFilePath = Path.Combine(logPathBackup, $"log{date}.log");  
 
                     File.Move(logFilePath, logBackupFilePath);
 
-                    _logger.LogInformation($"Лог файл был сброшен и перемещен сюда:\n{logFilePath}");
+					_logger.LogInformation($@"Лог файл был сброшен и перемещен сюда:{"\n"+ logPathBackup + "\n"}Под именем {"\n"}log{date}.log");
 
                     _oneTask.SetIsRunning (true);
                 }

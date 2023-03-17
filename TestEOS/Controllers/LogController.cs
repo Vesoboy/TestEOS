@@ -13,13 +13,10 @@ namespace TestEOS.Controllers
 {
     public class LogController : Controller
     {
-
-        private readonly ILogger<LogController> _logger;
         private static OneTask _hosted;
 
-        public LogController(ILogger<LogController> logger, OneTask hosted)
+        public LogController( OneTask hosted)
         {
-            _logger = logger;
             _hosted = hosted;
         }
 
@@ -30,20 +27,12 @@ namespace TestEOS.Controllers
 
         public IActionResult Start() 
         {
-            //var oneTaskLog = HttpContext.RequestServices.GetService<IHostedService>();
-            //oneTaskLog.StartAsync(HttpContext.RequestAborted);
-
-            
             _hosted.StartAsync(CancellationToken.None);
             return View();
         }
 
         public IActionResult Stop()
         {
-            //var oneTaskLog = HttpContext.RequestServices.GetService<IHostedService>();
-            //oneTaskLog.StartAsync(HttpContext.RequestAborted);
-
-            
             _hosted.StopAsync(CancellationToken.None);
             return View();
         }

@@ -27,6 +27,8 @@ namespace TestEOS
         {
             services.AddControllersWithViews();
             services.AddSingleton<OneTask>();
+            //services.AddSingleton<TwoTask>();
+            services.AddHostedService<TwoTask>();
             //services.AddControllers();
             //services.AddHostedService<OneTask>();
         }

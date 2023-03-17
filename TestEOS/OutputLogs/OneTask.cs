@@ -31,10 +31,13 @@ namespace TestEOS.OutputLogs
 
         public override async Task StopAsync(CancellationToken stoppingToken)
         {
-            Program.Logger.Info("ФЗ 1 остановлена");
-            _timer?.Dispose();
-            IsRunning = false;
-            await base.StopAsync(stoppingToken);
+            if (IsRunning)
+            {
+                Program.Logger.Info("ФЗ 1 остановлена");
+                _timer?.Dispose();
+                IsRunning = false;
+                await base.StopAsync(stoppingToken);
+            }
         }
         public void SetIsRunning(bool value)
         {

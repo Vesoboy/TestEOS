@@ -17,7 +17,6 @@ namespace TestEOS.OutputLogs
             _logger = logger;
             _oneTask = oneTask;
         }
-
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
             while (!stoppingToken.IsCancellationRequested)
@@ -26,46 +25,16 @@ namespace TestEOS.OutputLogs
 
                 if (!_oneTask.IsRunning)
                 {
-                    var filePath = @"C:\Users\Ivan\Desktop\TestEOS\Logs\log.log";
-                    var backupFilePath = $@"C:\Users\Ivan\Desktop\TestEOS\Logs\logs\log{DateTime.Now:yyyy-MM-dd_HH-mm-ss}.txt";
+                    var logFilePath = @"C:\Users\Ivan\Desktop\TestEOS\Logs\log.log";
+                    var logBackupFilePath = $@"C:\Users\Ivan\Desktop\TestEOS\Logs\logs\log{DateTime.Now:yyyy-MM-dd_HH-mm-ss}.log";
 
-                    // Write the file backup information to the log
-                    _logger.LogInformation($"Перемещение файла из:\n{filePath}\n" +
-                        $"файл перемещен сюда:\n{backupFilePath}");
+                    File.Move(logFilePath, logBackupFilePath);
 
-                    // Move the current log file to a backup file with a timestamp
-                    File.Move(filePath, backupFilePath);
-
-                    // Create a new empty log file
-                    File.WriteAllText(filePath, string.Empty);
-
-                    // Log that the log file was reset
-                    _logger.LogInformation($"Лог файл был сброшен и перемещен:\n{filePath}");
+                    _logger.LogInformation($"Лог файл был сброшен и перемещен сюда:\n{logFilePath}");
 
                     _oneTask.SetIsRunning (true);
                 }
             }
-
-            //private async Task WriteLogToFileAsync(string filePath)
-            //{
-            //    var logContent = await File.ReadAllTextAsync(filePath);
-            //    var backupFilePath = Path.Combine(_backupDirectoryPath, $"log_{DateTime.Now:yyyy-MM-dd_HH-mm-ss}.txt");
-
-            //    await File.WriteAllTextAsync(backupFilePath, logContent);
-            //}
-
-            //private async Task ClearLogAsync(string filePath, string backupDirectoryPath)
-            //{
-            //    var backupFilePath = Path.Combine(backupDirectoryPath, $"log_{DateTime.Now:yyyy-MM-dd_HH-mm-ss}.txt");
-
-            //    if (File.Exists(filePath))
-            //    {
-            //        File.Move(filePath, backupFilePath);
-            //    }
-
-            //    await File.WriteAllTextAsync(filePath, "");
-            //}
         }
-
     }
 }

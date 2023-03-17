@@ -27,10 +27,10 @@ namespace TestEOS.OutputLogs
                 {
                     var date = $"{DateTime.Now:yyyy-MM-dd_HH-mm-ss}";
 
-                    string logPath = Path.Combine("C:", "Users", "Ivan", "Desktop", "TestEOS", "Logs");
+                    string logPath = Path.Combine("C:", "Users", "Ivan", "Desktop", "TestEOS", "TestEOS", "Logs");
                     var logFilePath = Path.Combine(logPath, "log.log");
 
-                    string logPathBackup = Path.Combine("C:", "Users", "Ivan", "Desktop", "TestEOS", "Logs", "logs");
+                    string logPathBackup = Path.Combine("C:", "Users", "Ivan", "Desktop", "TestEOS", "TestEOS", "Logs", "logs");
                     var logBackupFilePath = Path.Combine(logPathBackup, $"log{date}.log");  
 
                     File.Move(logFilePath, logBackupFilePath);

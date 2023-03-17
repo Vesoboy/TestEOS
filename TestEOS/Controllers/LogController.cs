@@ -15,9 +15,9 @@ namespace TestEOS.Controllers
     {
 
         private readonly ILogger<LogController> _logger;
-        private static IHostedService _hosted;
+        private static OneTask _hosted;
 
-        public LogController(ILogger<LogController> logger, IHostedService hosted)
+        public LogController(ILogger<LogController> logger, OneTask hosted)
         {
             _logger = logger;
             _hosted = hosted;

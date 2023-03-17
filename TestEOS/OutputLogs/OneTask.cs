@@ -39,6 +39,7 @@ namespace TestEOS.OutputLogs
             //_timer = null;//?.Change(Timeout.Infinite, 0);
             
             Program.Logger.Info("ФЗ 1 остановлено");
+            //_timer?.Change(Timeout.Infinite, 0);
             _timer?.Dispose();
             return Task.CompletedTask;
         }

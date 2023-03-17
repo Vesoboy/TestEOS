@@ -26,7 +26,9 @@ namespace TestEOS
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-            services.AddHostedService<OneTask>();
+            services.AddSingleton<OneTask>();
+            //services.AddControllers();
+            //services.AddHostedService<OneTask>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

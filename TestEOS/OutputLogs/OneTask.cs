@@ -6,7 +6,7 @@ using Microsoft.Extensions.Hosting;
 
 namespace TestEOS.OutputLogs
 {
-    public class OneTask: IHostedService//, IDisposable
+    public class OneTask: BackgroundService//, IDisposable
     {
         private int executionCount = 0;
         private readonly ILogger<OneTask> _logger;
@@ -17,36 +17,29 @@ namespace TestEOS.OutputLogs
             _logger = logger;
         }
 
-        public Task StartAsync(CancellationToken stoppingToken)
+        protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
 
-            _timer = new Timer(DoWork, null, TimeSpan.Zero,
-                TimeSpan.FromSeconds(10));
-            Program.Logger.Info("ФЗ 1 активно");
-            return Task.CompletedTask;
+            while (!stoppingToken.IsCancellationRequested)
+            {
+                _logger.LogInformation("ФЗ 1 активна");
+
+                await Task.Delay(TimeSpan.FromSeconds(10), stoppingToken);
+            }
+
         }
 
-        private void DoWork(object state)
-        {
-            var count = Interlocked.Increment(ref executionCount);
 
-            _logger.LogInformation(
-                "Timed Hosted Service is working. Count: {Count}", count);
-        }
-
-        public Task StopAsync(CancellationToken stoppingToken)
+        public override async Task StopAsync(CancellationToken stoppingToken)
         {
             //_timer = null;//?.Change(Timeout.Infinite, 0);
             
-            Program.Logger.Info("ФЗ 1 остановлено");
-            //_timer?.Change(Timeout.Infinite, 0);
+            Program.Logger.Info("ФЗ 1 остановлена");
+
             _timer?.Dispose();
-            return Task.CompletedTask;
+            await base.StopAsync(stoppingToken);
+
         }
 
-        //public void Dispose()
-        //{
-        //    _timer?.Dispose();
-        //}
     }
 }
